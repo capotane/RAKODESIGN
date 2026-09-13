@@ -349,9 +349,17 @@
             margin: 0;
         }
 
-        .item-caption.caption-conceited {
-            bottom: -23px;
-        }
+        /* Desktop offset for Conceited */
+.item-caption.caption-conceited {
+    bottom: -23px;
+}
+
+/* Reset offset on Mobile screens */
+@media (max-width: 900px) {
+    .item-caption.caption-conceited {
+        bottom: 0;
+    }
+}
 
         /* Mobile Header & Responsive Design */
         .mobile-header {

@@ -426,38 +426,15 @@
             .projects-message {
                 transform: none;
             }
-
-        }
-        /* Enhanced Caption Visibility for Light & Dark Backgrounds */
-.item-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 20px 20px 20px;
-    color: #ffffff; /* Bright white text for maximum contrast */
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    line-height: 1.35;
-    text-transform: uppercase;
-    
-    /* Soft dark gradient backdrop so text pops over light or dark background elements */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
-    
-    /* Text shadow to ensure contrast even if gradient is subtle */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    
-    opacity: 0;
-    transform: translateY(6px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Ensure captions are always visible on mobile/touch screens */
+/* Mobile-Only Caption Visibility & Overlay */
 @media (max-width: 900px) {
     .item-caption {
         opacity: 1;
         transform: translateY(0);
+        color: #ffffff;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        padding: 30px 20px 20px 20px;
     }
 }
     </style>

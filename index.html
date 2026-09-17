@@ -7,6 +7,27 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <style>
         
+        /* Gallery Container layout */
+.gallery-grid, .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Ensures tall images don't stretch surrounding items */
+    gap: 20px;               /* Keeps consistent spacing between all grid items */
+}
+
+/* Individual Gallery Cards */
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust percentage based on your desired columns */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure images maintain natural proportions */
+.gallery-item img {
+    width: 100%;
+    height: auto;           /* Allows tall photos to scale naturally according to width */
+    display: block;
+}
         /* CSS Reset & General Styles */
         * {
             margin: 0;
@@ -547,6 +568,15 @@ a[href^="mailto:"] {
                 <img src="assets/amends.jpg" alt="Amends portrait painting">
                 <div class="item-caption"><h3>Amends</h3><p>50x70 CM</p></div>
             </div>
+
+<!-- NEW ITEM: Inserted directly to the right of AMENDS -->
+<div class="gallery-item" tabindex="0">
+    <img src="assets/deer.jpg" alt="Painting of a stag in a forest">
+    <div class="item-caption">
+        <h3>STAGLIATA</h3>
+        <p>57X141 CM</p>
+    </div>
+</div>
 
             </div>
         </section>

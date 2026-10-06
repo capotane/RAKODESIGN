@@ -518,6 +518,33 @@ a[href^="mailto:"] {
         grid-column: span 1; /* Drops back to 1 column on smaller screens */
     }
 }
+
+            /* FORCE 2 COLUMN WIDE GALLERY ITEM TAMIL TIGER */
+
+
+
+            /* 1. Ensure grid layout on the parent container */
+.gallery-grid, .gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr); /* Set this to your total number of columns (e.g. 3) */
+    gap: 20px;
+}
+
+/* 2. Force TAMILTIGER across 2 columns */
+.featured-wide {
+    grid-column: span 2 !important;
+}
+
+/* 3. Reset to 1 column on mobile */
+@media (max-width: 900px) {
+    .gallery-grid, .gallery {
+        grid-template-columns: 1fr;
+    }
+    .featured-wide {
+        grid-column: span 1 !important;
+    }
+}
+            
             
     </style>
 </head>

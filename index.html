@@ -493,58 +493,6 @@ a[href^="mailto:"] {
     align-items: flex-start;
 }
 
-/* Base style for standard items ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image filled without distortion ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
-    display: block;
-}
-
-/* Wide image spanning 2 columns on desktop ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
-.featured-wide {
-    grid-column: span 2; /* Takes up 2 full column spaces */
-}
-
-/* Ensure wide item fits nicely on mobile screens ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
-@media (max-width: 900px) {
-    .featured-wide {
-        grid-column: span 1; /* Drops back to 1 column on smaller screens */
-    }
-}
-
-            /* FORCE 2 COLUMN WIDE GALLERY ITEM TAMIL TIGER */
-
-
-
-            /* 1. Ensure grid layout on the parent container */
-.gallery-grid, .gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr); /* Set this to your total number of columns (e.g. 3) */
-    gap: 20px;
-}
-
-/* 2. Force TAMILTIGER across 2 columns */
-.featured-wide {
-    grid-column: span 2 !important;
-}
-
-/* 3. Reset to 1 column on mobile */
-@media (max-width: 900px) {
-    .gallery-grid, .gallery {
-        grid-template-columns: 1fr;
-    }
-    .featured-wide {
-        grid-column: span 1 !important;
-    }
-}
-            
             
     </style>
 </head>
@@ -612,7 +560,7 @@ a[href^="mailto:"] {
     <img src="assets/TAMILTIGER1.jpg" alt="Tamil Tiger Painting">
     <div class="item-caption">
         <h3>TAMIL TIGER</h3>
-        <p>100x140 CM</p>
+        <p>140x100 CM</p>
     </div>
 </div>
 

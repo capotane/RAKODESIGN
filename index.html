@@ -484,6 +484,41 @@ a[href^="mailto:"] {
         font-size: clamp(0.85rem, 4.5vw, 1.2rem); /* Dynamically scales font down on narrow screens */
     }
 }
+
+            /* Ensure the main gallery container uses CSS Grid */
+.gallery-grid, .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax width to match your column layout */
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Base style for standard items ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image filled without distortion ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
+    display: block;
+}
+
+/* Wide image spanning 2 columns on desktop ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
+.featured-wide {
+    grid-column: span 2; /* Takes up 2 full column spaces */
+}
+
+/* Ensure wide item fits nicely on mobile screens ( ARRANGED DUE TO TAMIL TIGER HORIZONTAL) */
+@media (max-width: 900px) {
+    .featured-wide {
+        grid-column: span 1; /* Drops back to 1 column on smaller screens */
+    }
+}
+            
     </style>
 </head>
 <body>
@@ -544,6 +579,17 @@ a[href^="mailto:"] {
                 <div class="item-caption"><h3>Morticia</h3><p>96x133 CM</p></div>
             </div>
 
+
+<!-- NEW FEATURED HORIZONTAL ITEM: TAMILTIGER -->
+<div class="gallery-item featured-wide">
+    <img src="assets/TAMILTIGER.jpg" alt="Tamil Tiger Painting">
+    <div class="item-caption">
+        <h3>TAMIL TIGER</h3>
+        <p>100x140 CM</p>
+    </div>
+</div>
+
+                
             <div class="gallery-item" tabindex="0">
                 <img src="assets/capetan.jpg" alt="Framed portrait titled Capetan">
                 <div class="item-caption"><h3>Capetan</h3><p>67x93 CM</p></div>
